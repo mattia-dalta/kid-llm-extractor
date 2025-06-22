@@ -87,7 +87,7 @@ Performance Scenarios at RHP:
 ## Author
 
 **Mattia D'Alta**  
-Data & Enthusiast | Bologna, Italy  
+Data & AI Enthusiast | Bologna, Italy  
 GitHub: [mattia-dalta](https://github.com/mattia-dalta)
 
 ---
