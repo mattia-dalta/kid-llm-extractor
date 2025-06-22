@@ -15,7 +15,7 @@ This app allows you to:
   - RHP (Recommended Holding Period)
   - Product Name
   - Issuer
-  - Target Market (literal text)
+  - Target Market
   - Performance Scenarios at RHP (only percentages)
 - Interact with OpenAI GPT-4o to semantically analyze and summarize the content.
 - Download the results as a `.txt` file.
