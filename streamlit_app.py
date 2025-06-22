@@ -1,5 +1,5 @@
 import streamlit as st
-import fitz  # PyMuPDF
+import fitz  # PyMuPDF è una libreria per la manipolazione di PDF
 from openai import OpenAI
 from io import BytesIO
 from dotenv import load_dotenv
@@ -70,12 +70,13 @@ Testo documento:
     )
     return response.choices[0].message.content.strip()
 
-# Streamlit UI
+# UI Streamlit
 st.set_page_config(page_title="Estrazione KID", layout="centered")
 st.image("prometeia_logo.jpg", width=200)
+
 st.markdown("""
-    <h1 style='text-align: center; color: #0071BC;'>Estrazione Dati Strutturati da Documenti KID</h1>
-    <p style='text-align: center; font-size: 16px;'>Carica uno o più file PDF per estrarre i dati</p>
+    <h1 style='text-align: center; color: #0d29ce;'>Estrazione Dati Strutturati da Documenti KID</h1>
+    <p style='text-align: center; font-size: 16px; color: black;'>Carica uno o più file PDF per estrarre i dati</p>
     """, unsafe_allow_html=True)
 
 uploaded_files = st.file_uploader("Seleziona uno o più documenti KID", type="pdf", accept_multiple_files=True)
@@ -90,21 +91,21 @@ if uploaded_files:
             estrazioni.append((file.name, risultato))
 
     for nome_file, risultato in estrazioni:
-        st.markdown(f"### 📁 Risultato per: {nome_file}")
+        st.markdown(f"<h3 style='color:#0d29ce;'>📁 Risultato per: {nome_file}</h3>", unsafe_allow_html=True)
         for linea in risultato.splitlines():
             if ":" in linea:
                 chiave, valore = linea.split(":", 1)
-                st.markdown(f"<b>{chiave.strip()}</b>: {valore.strip()}", unsafe_allow_html=True)
+                st.markdown(f"<span style='color:black'><b>{chiave.strip()}</b>: {valore.strip()}</span>", unsafe_allow_html=True)
             else:
-                st.write(linea)
-        st.markdown("---")
+                st.markdown(f"<span style='color:black'>{linea}</span>", unsafe_allow_html=True)
+        st.markdown("<hr style='border: 1px solid #41db5e;'>", unsafe_allow_html=True)
 
-    # File da scaricare
     tutto_il_testo = "\n\n".join([
-        f"==== {nome_file} ====" + "\n" + risultato for nome_file, risultato in estrazioni
+        f"==== {nome_file} ====\n{risultato}" for nome_file, risultato in estrazioni
     ])
     file_buffer = BytesIO(tutto_il_testo.encode("utf-8"))
 
+    st.markdown("<br>", unsafe_allow_html=True)
     st.download_button(
         label="📥 Scarica estrazioni",
         data=file_buffer,
