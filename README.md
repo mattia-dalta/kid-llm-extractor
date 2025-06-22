@@ -4,7 +4,7 @@ This is a Streamlit application that automatically extracts key information from
 
 ---
 
-## 📄 Description
+## Description
 
 This app allows you to:
 
@@ -15,14 +15,14 @@ This app allows you to:
   - RHP (Recommended Holding Period)
   - Product Name
   - Issuer
-  - Target Market (literal text)
+  - Target Market
   - Performance Scenarios at RHP (only percentages)
 - Interact with OpenAI GPT-4o to semantically analyze and summarize the content.
 - Download the results as a `.txt` file.
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 Install the required Python packages with:
 
@@ -34,7 +34,7 @@ Make sure you have Python 3.9+ installed.
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Create a `.env` file in the project root with your OpenAI API key:
 
@@ -52,7 +52,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 🔐 Security
+## Security
 
 - The `.env` file is excluded from version control via `.gitignore`.
 - PDF files are not uploaded or shared and are also ignored by Git.
@@ -60,7 +60,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 📦 Output Example
+## Output Example
 
 ```
 ISIN: LU1234567890
@@ -78,20 +78,20 @@ Performance Scenarios at RHP:
 
 ---
 
-## 🧠 Notes
+## Notes
 
 > This tool is for educational and demonstrational purposes only. It is not affiliated with any official financial institution.
 
 ---
 
-## 👤 Author
+## Author
 
 **Mattia D'Alta**  
-Data Scientist | Bologna, Italy  
+Data & AI Enthusiast | Bologna, Italy  
 GitHub: [mattia-dalta](https://github.com/mattia-dalta)
 
 ---
 
-## 📄 License
+## License
 
 MIT License
