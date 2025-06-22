@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Env
+.env
+*.env
+
+# Chiavi/API
+openai_key.txt
+
+# Dati sensibili
+*.pdf
+output/
+sample_data/
+
+# Streamlit settings cache (opzionale)
+.streamlit/
