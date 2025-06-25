@@ -72,7 +72,8 @@ Testo documento:
 
 # UI Streamlit
 st.set_page_config(page_title="Estrazione KID", layout="centered")
-st.image("prometeia_logo.jpg", width=200)
+# Logo removed for public version
+# st.image("prometeia_logo.png", width=200)
 
 st.markdown("""
     <h1 style='text-align: center; color: #0d29ce;'>Estrazione Dati Strutturati da Documenti KID</h1>
