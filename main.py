@@ -5,7 +5,7 @@ from modules.llm_interaction import extract_kid_info
 
 # UI base
 st.set_page_config(page_title="Estrazione KID", layout="centered")
-st.image("prometeia_logo.jpg", width=200)
+# st.image("company_logo.jpg", width=200)  # Placeholder for future company branding
 
 st.markdown("""
     <h1 style='text-align: center; color: #0d29ce;'>Estrazione Dati Strutturati da Documenti KID</h1>
